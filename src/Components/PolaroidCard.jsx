@@ -82,7 +82,7 @@ export default function PolaroidCard() {
         {/* IMAGE */}
         <div className="overflow-hidden">
           <img
-            src="/images/polaroid.png"
+            src="/images/polaroid.webp"
             alt="polaroid"
             className="
               w-full
