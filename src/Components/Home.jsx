@@ -273,7 +273,10 @@ const Home = () => {
 
                         <div className='bg-img'>
                             <img
-                                src="/images/under-img.jpg"
+                                src="/images/under-img.webp"
+                                fetchPriority="high"
+                                loading="eager"
+                                decoding="async"
                                 alt="image"
                                 // className='abs-center masked-img size-full object-contain'
                                 className='abs-center masked-img w-[220px] h-[220px] md:w-full md:h-full object-contain'

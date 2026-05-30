@@ -83,6 +83,9 @@ export default function PolaroidCard() {
         <div className="overflow-hidden">
           <img
             src="/images/polaroid.webp"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
             alt="polaroid"
             className="
               w-full

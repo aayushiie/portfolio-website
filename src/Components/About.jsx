@@ -191,37 +191,49 @@ const About = () => {
     const animationFrame = useRef(null)
 
     const [distanceThreshold, setDistanceThreshold] = useState(
-        window.innerWidth < 900 ? 30 : 50
+        // window.innerWidth < 900 ? 30 : 50
+        window.innerWidth < 900 ? 60 : 90
     )
 
+    // preloading in batches
     useEffect(() => {
-        let mounted = true
+        const firstImages = images.slice(0, 8)
 
-        const preloadImages = async () => {
-            const decoded = await Promise.all(
-                images.map(async (src) => {
-                    const img = new Image()
-                    img.src = src
-
-                    try {
-                        await img.decode()
-                    } catch {}
-
-                    return img
-                })
-            )
-
-            if (mounted) {
-                decodedImagesRef.current = decoded
-            }
-        }
-
-        preloadImages()
-
-        return () => {
-            mounted = false
-        }
+        decodedImagesRef.current = firstImages.map((src) => {
+            const img = new Image()
+            img.src = src
+            return img
+        })
     }, [])
+
+    // useEffect(() => {
+    //     let mounted = true
+
+    //     const preloadImages = async () => {
+    //         const decoded = await Promise.all(
+    //             images.map(async (src) => {
+    //                 const img = new Image()
+    //                 img.src = src
+
+    //                 try {
+    //                     await img.decode()
+    //                 } catch {}
+
+    //                 return img
+    //             })
+    //         )
+
+    //         if (mounted) {
+    //             decodedImagesRef.current = decoded
+    //         }
+    //     }
+
+    //     preloadImages()
+
+    //     return () => {
+    //         mounted = false
+    //     }
+    // }, [])
 
     useEffect(() => {
         if (!trailRef.current) return
@@ -255,7 +267,7 @@ const About = () => {
         }
     }, [])
 
-   
+
     useGSAP(() => {
         const split = new SplitText(textRef.current, {
             type: 'chars',
@@ -318,14 +330,20 @@ const About = () => {
         poolIndexRef.current =
             (poolIndexRef.current + 1) % POOL_SIZE
 
-        img.src =
-            decodedImagesRef.current[
-                indexRef.current
-            ].src
+        // img.src =
+        //     decodedImagesRef.current[
+        //         indexRef.current
+        //     ].src
+
+        // indexRef.current =
+        //     (indexRef.current + 1) %
+        //     decodedImagesRef.current.length
+
+        img.src = images[indexRef.current]
 
         indexRef.current =
             (indexRef.current + 1) %
-            decodedImagesRef.current.length
+            images.length
 
         gsap.killTweensOf(img)
 
@@ -406,10 +424,15 @@ const About = () => {
 
     useEffect(() => {
         const handleResize = () => {
+            // setDistanceThreshold(
+            //     window.innerWidth < 900
+            //         ? 60
+            //         : 100
+            // )
             setDistanceThreshold(
                 window.innerWidth < 900
                     ? 60
-                    : 100
+                    : 90
             )
         }
 
