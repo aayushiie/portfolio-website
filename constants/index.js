@@ -22,10 +22,10 @@ export const allDetails = [
     title: "Writing",
     link: "/writing"
   },
-  {
-    id: 4,
-    image: "/images/designing-animation-1.webp",
-    title: "Art",
-    link: "/art"
-  }
+  // {
+  //   id: 4,
+  //   image: "/images/designing-animation-1.webp",
+  //   title: "Art",
+  //   link: "/art"
+  // }
 ]

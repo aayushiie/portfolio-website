@@ -260,7 +260,7 @@ body {
     }
 
     .detail-tabs {
-      @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 mb-10 relative z-10 md:max-w-6xl md:mx-auto;
+      @apply grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-10 mb-10 relative z-10 md:max-w-6xl md:mx-auto;
 
       button {
         @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-holt;
@@ -356,7 +356,7 @@ body {
   }
 }
 
-.image-here {
+/* .image-here {
   position: fixed;
   inset: 0;
   width: 180px;
@@ -366,6 +366,17 @@ body {
   pointer-events: none;
   opacity: 0;
   border: 2px solid black;
+} */
+
+.image-here {
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid black;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  user-select: none;
 }
 
 @media (max-width: 900px) {
