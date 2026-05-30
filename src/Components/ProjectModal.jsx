@@ -20,7 +20,6 @@ export default function ProjectModal({ project, onClose }) {
               z-50
               bg-[#191A19]
               p-12
-              overflow-y-auto
               font-space
             "
             initial={{ y: "100%" }}
