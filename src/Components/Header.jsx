@@ -100,7 +100,7 @@ export default function Header({ heading, text }) {
                     );
                 })}
             </motion.h1>
-            <p className="font-space text-sm sm:text-base md:text-xl max-w-[92vw] md:max-w-[50vw] mt-4 md:mt-5 text-center md:text-justify">
+            <p className="font-space text-sm sm:text-base md:text-xl max-w-[90vw] md:max-w-[50vw] mt-5 text-justify">
                 {text}
             </p>
         </div>

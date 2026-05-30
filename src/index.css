@@ -36,7 +36,6 @@ body {
   color: #f8f6f3;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  height: auto;
 }
 
 ::selection {
@@ -79,13 +78,13 @@ body {
   #hero {
     @apply relative min-h-dvh w-full flex-center overflow-hidden;
 
-    .left-sloth {
+    /* .left-sloth {
       @apply absolute left-0 md:top-40 xl:top-56 2xl:top-72 md:bottom-auto bottom-20 md:w-fit w-24 max-h-40 pointer-events-none;
     }
 
     .right-sloth {
       @apply absolute right-0 md:bottom-0 xl:top-20 2xl:top-12 top-1/2 md:w-fit w-24 max-h-40 pointer-events-none;
-    }
+    } */
 
     .title {
       @apply relative z-20 col-center;
@@ -216,51 +215,45 @@ body {
   }
 
   #art {
-    @apply flex-center flex-col min-h-dvh p-5 relative;
+    @apply flex-center flex-col min-h-dvh p-5 mt-20 relative;
 
     /* .bg-img {
       @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none;
     } */
     .bg-img {
-      @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none;
+      /* @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none; */
+      @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2;
     }
 
     #about-content {
-      /* .content-text-left {
-        @apply flex items-center gap-2 font-space font-medium px-8;
-      }
-
-      .content-text-right {
-        @apply flex items-center gap-2 justify-start font-space font-medium px-8;
-      } */
       .content-text-left {
-        @apply flex items-center gap-2 font-space font-medium px-2 md:px-8 text-sm md:text-base justify-center md:justify-start;
+        @apply flex items-center gap-2 font-space font-medium;
       }
 
       .content-text-right {
-        @apply flex items-center gap-2 font-space font-medium px-2 md:px-8 text-sm md:text-base justify-center md:justify-start;
+        @apply flex items-center gap-2 justify-start font-space font-medium;
       }
     }
 
     h2 {
-      @apply relative md:text-[10vw] text-8xl text-nowrap leading-none font-holt text-center text-gray-500 mb-8;
+      @apply relative md:text-[10vw] md:text-8xl text-nowrap leading-none font-holt text-center text-gray-500 mb-8 text-4xl;
     }
 
-    .content {
-      /* @apply relative flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10; */
-      @apply relative flex md:flex-row flex-col justify-between md:mb-16 mt-40 md:mt-0 gap-8 md:gap-10 px-4 md:px-0;
-    }
+    /* .content { */
+      /* @apply relative; */
+      /* @apply relative flex md:flex-row flex-col justify-between md:mb-16 mt-40 md:mt-0 gap-8 md:gap-10 px-4 md:px-0; */
+    /* } */
   }
 
   #menu {
-    @apply relative w-full md:mt-20 mt-0 px-5 py-6;
+    @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20;
 
-    #menu-heading {
+    /* #menu-heading {
       @apply font-holt text-center pb-6 text-2xl;
-    }
+    } */
 
     .detail-tabs {
-      @apply grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-10 mb-10 relative z-10 md:max-w-6xl md:mx-auto;
+      @apply grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-10 sm:mb-12 mb-10 relative z-10 md:max-w-6xl md:mx-auto;
 
       button {
         @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-holt;
@@ -268,10 +261,10 @@ body {
     }
 
     .content {
-      @apply flex flex-col items-center justify-center container mx-auto relative gap-3;
+      @apply flex flex-col items-center justify-between container mx-auto relative;
 
       .arrows {
-        @apply flex items-center justify-between w-full mb-2 px-6;
+        @apply flex items-center justify-between w-full absolute;
       }
 
       .arrows button {
@@ -279,7 +272,7 @@ body {
       }
 
       .arrows span {
-        @apply text-2xl font-holt leading-tight;
+        @apply text-2xl font-holt leading-none hidden md:block;
       }
 
       .arrows img {
@@ -300,10 +293,10 @@ body {
     }
 
     .cocktail {
-      @apply flex-center mt-2;
+      @apply flex-center mt-10;
 
       img {
-        @apply object-contain h-[40vh] md:h-[35vh];
+        @apply object-contain h-[35vh];
       }
     }
   }
@@ -370,9 +363,12 @@ body {
 
 .image-here {
   width: 80px;
+  aspect-ratio: 3/3;
   height: auto;
   object-fit: cover;
+  border-radius: 6px;
   border: 2px solid black;
+  pointer-events: none;
   will-change: transform, opacity;
   transform: translateZ(0);
   backface-visibility: hidden;

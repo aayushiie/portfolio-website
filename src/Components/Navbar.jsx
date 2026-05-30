@@ -7,21 +7,20 @@ const Navbar = () => {
         <header className="fixed top-0 left-0 w-full z-50 flex justify-center">
             <nav
                 className="
-                    mt-3 md:mt-6
+                    mt-6
                     flex
                     items-center
                     justify-between
                     gap-4 md:gap-10
-                    px-4 md:px-6
-                    py-2 md:py-3
+                    px-6
+                    py-3
                     rounded-full
                     border
                     border-white/10
                     bg-black/20
                     w-[95%] md:w-fit
                     max-w-[95vw]
-                    overflow-x-auto
-                     overflow-y-hidden
+                    overflow-hidden
                     "
                 id="nav-bar">
                 {/* LOGO */}

@@ -232,18 +232,18 @@ const Home = () => {
 
                 {/* <div className='container mx-auto h-full pt-20'> */}
                 <div className='container mx-auto h-full px-4 md:px-8 pt-24 md:pt-20'>
-                    {/* <h2 className='will-fade'>
-                        ABOUT ME
-                    </h2> */}
-                    <h2 className="will-fade text-[2rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem] leading-none text-center px-4">
+                    <h2 className='will-fade'>
                         ABOUT ME
                     </h2>
+                    {/* <h2 className="will-fade text-[2rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem] leading-none text-center px-4">
+                        ABOUT ME
+                    </h2> */}
 
-                    <div className='content flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16"'>
+                    <div className='content flex flex-col md:flex-row items-center justify-between md:mb-16 md:mt-0 mt-40 gap-10'>
 
                         <ul
-                            // className='space-y-4 will-fade'
-                            className='space-y-3 md:space-y-4 will-fade text-sm md:text-base text-center md:text-left'
+                            className='space-y-4 will-fade'
+                            // className='space-y-3 md:space-y-4 will-fade text-sm md:text-base text-center md:text-left'
                             id='about-content'
                         >
                             <li className='underline font-semibold content-text-left'>
