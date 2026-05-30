@@ -72,7 +72,7 @@ function App() {
         content: "#smooth-content",
         smooth: 1,
         effects: true,
-        smoothTouch: 0.1,
+        smoothTouch: 0,
       });
 
       return () => {

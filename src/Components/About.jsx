@@ -151,7 +151,7 @@ const About = () => {
 
             <div className="text relative z-10" id="scroll-trail">
                 <p className="movies-text" ref={textRef}>
-                    I love to read. I love movies. My only true passion is consumption and creation. So if you could see the inside of my brain, this is mostly what you'd find. 
+                    I love to read. I love movies. My only true passion is consumption and creation. So if you could see the inside of my brain, you'd find these living rent-free. 
                     <br/>
                     (move your cursor around to see the fun)
                 </p>

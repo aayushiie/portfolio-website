@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import { useEffect } from "react"
 import gsap from "gsap"
-
+import ScrollToTop from "./ScrollToTop"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import PageTransition from "./PageTransition"
@@ -22,6 +22,7 @@ const Layout = () => {
     <>
       <AnimatePresence mode="wait">
         <PageTransition key={location.pathname}>
+          <ScrollToTop />
           <Navbar />
           <Outlet />
           <Footer />

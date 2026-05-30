@@ -27,12 +27,12 @@ export default function Header({ heading, text }) {
     ];
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+        // <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+        <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 md:px-6">
             <motion.h1
-                initial="hidden"
                 animate="visible"
                 className="
-          text-[10vw]
+        text-[18vw] sm:text-[14vw] md:text-[10vw]
           leading-none
           font-black
           uppercase
@@ -40,7 +40,7 @@ export default function Header({ heading, text }) {
           flex
           flex-wrap
           justify-center
-          max-w-[50vw]
+          max-w-[92vw] md:max-w-[50vw]
         "
             >
                 {heading.split("").map((char, index) => {
@@ -90,6 +90,7 @@ export default function Header({ heading, text }) {
                 cursor-default
                 will-change-transform
                 transition-all
+                mt-10
               "
                         >
                             {char === " "
@@ -99,7 +100,7 @@ export default function Header({ heading, text }) {
                     );
                 })}
             </motion.h1>
-            <p className="font-space text-xl max-w-[50vw] mt-5">
+            <p className="font-space text-sm sm:text-base md:text-xl max-w-[92vw] md:max-w-[50vw] mt-4 md:mt-5 text-center md:text-justify">
                 {text}
             </p>
         </div>

@@ -61,9 +61,9 @@ const Menu = () => {
 
   return (
     <section id="menu" ref={sectionRef}>
-      <h2 id="menu-heading">Choose your character</h2>
+      {/* <h2 id="menu-heading">Choose your character</h2> */}
 
-      <nav className='detail-tabs' aria-label='Category Navigation'>
+      <nav className='detail-tabs overflow-x-auto whitespace-nowrap px-4 md:px-0' aria-label='Category Navigation'>
         {allDetails.map((name, index) => {
           const isActive = index === currentIndex;
           return (
@@ -74,6 +74,7 @@ const Menu = () => {
         })}
       </nav>
 
+      {/* <div className='content'> */}
       <div className='content'>
         <div className='arrows'>
           <button className='text-left' onClick={() => goToSlide(currentIndex - 1)}>
@@ -87,7 +88,7 @@ const Menu = () => {
         </div>
 
         <div className='cocktail'>
-          <img src={currentName.image} className='object-contain' />
+          <img src={currentName.image} className='object-contain w-[220px] md:w-[320px] lg:w-auto' />
         </div>
 
         <div className='details'>

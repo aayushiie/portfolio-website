@@ -215,20 +215,20 @@ export default function PocketPlayer() {
             {/* PLAYER BODY */}
             <div
                 className="
-          w-[260px]
-          rounded-[36px]
-          p-3
-          bg-gradient-to-br
-          from-[#f6f6f6]
-          to-[#d8d8d8]
-          shadow-[0_20px_40px_rgba(0,0,0,0.18)]
-          border
-          border-black/10
-            rotate-[10deg]
-            opacity-95
-            transition-transform
-            hover:rotate-[6deg]
-            duration-300
+                    w-[260px]
+                    rounded-[36px]
+                    p-3
+                    bg-gradient-to-br
+                    from-[#f6f6f6]
+                    to-[#d8d8d8]
+                    shadow-[0_20px_40px_rgba(0,0,0,0.18)]
+                    border
+                    border-black/10
+                    rotate-[10deg]
+                    opacity-95
+                    transition-transform
+                    hover:rotate-[6deg]
+                    duration-300
         "
             >
                 {/* SCREEN */}

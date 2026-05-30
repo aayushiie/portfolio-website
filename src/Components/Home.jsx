@@ -102,7 +102,7 @@ const Home = () => {
 
             ScrollTrigger.create({
                 trigger: panel,
-                start: "top 50%",
+                start: "top center",
 
                 onEnter: () =>
                     gsap.to("#smooth-content", {
@@ -230,16 +230,20 @@ const Home = () => {
                 data-color='#F8F6F3'
             >
 
-                <div className='container mx-auto h-full pt-20'>
-
-                    <h2 className='will-fade'>
+                {/* <div className='container mx-auto h-full pt-20'> */}
+                <div className='container mx-auto h-full px-4 md:px-8 pt-24 md:pt-20'>
+                    {/* <h2 className='will-fade'>
+                        ABOUT ME
+                    </h2> */}
+                    <h2 className="will-fade text-[2rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem] leading-none text-center px-4">
                         ABOUT ME
                     </h2>
 
-                    <div className='content'>
+                    <div className='content flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16"'>
 
                         <ul
-                            className='space-y-4 will-fade'
+                            // className='space-y-4 will-fade'
+                            className='space-y-3 md:space-y-4 will-fade text-sm md:text-base text-center md:text-left'
                             id='about-content'
                         >
                             <li className='underline font-semibold content-text-left'>
@@ -269,9 +273,10 @@ const Home = () => {
 
                         <div className='bg-img'>
                             <img
-                                src="/images/under-img.webp"
+                                src="/images/under-img.jpg"
                                 alt="image"
-                                className='abs-center masked-img size-full object-contain'
+                                // className='abs-center masked-img size-full object-contain'
+                                className='abs-center masked-img w-[220px] h-[220px] md:w-full md:h-full object-contain'
                             />
                         </div>
 
@@ -311,9 +316,10 @@ const Home = () => {
 
             <About />
             <Menu />
-            <div className='absolute right-4 bottom-20 translate-y-1/4 hidden md:block'>
-          <PocketPlayer />
-        </div>
+            {/* <div className='absolute right-4 bottom-20 translate-y-1/4 hidden md:block'> */}
+            <div className='hidden lg:block absolute right-4 xl:right-8 bottom-12 xl:bottom-20 translate-y-1/4'>
+                <PocketPlayer />
+            </div>
         </>
     )
 }
