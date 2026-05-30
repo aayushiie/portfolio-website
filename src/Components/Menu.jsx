@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { allDetails } from '../../constants'
@@ -12,6 +12,13 @@ const Menu = () => {
   const contentRef = useRef()
   const sectionRef = useRef(null)
   const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    allDetails.forEach((item) => {
+      const img = new Image()
+      img.src = item.image
+    })
+  }, [])
 
   useGSAP(() => {
     gsap.fromTo('#title', { opacity: 0 }, { opacity: 1, duration: 1 })

@@ -65,6 +65,18 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+  const imagesToPreload = [
+    "/images/under-img.jpg",
+    "/images/polaroid.webp",
+  ]
+
+  imagesToPreload.forEach((src) => {
+    const img = new Image()
+    img.src = src
+  })
+}, [])
+
   useGSAP(() => {
     if (!loading) {
       const smoother = ScrollSmoother.create({
